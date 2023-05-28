@@ -4,14 +4,14 @@ require("dotenv").config()
 const morgan = require("morgan")
 const mongoose = require("mongoose")
 const expressJwt = require("express-jwt")
-const PORT = process.env.PORT || 5000
+const PORT =  5000
 
 app.use(morgan("dev"))
 app.use(express.json())
 
 //connect to db
 mongoose.connect(
-    `mongodb://${process.env.BASE_URL}/todo-auth-example`,
+    `mongodb+srv://mywebdevworld:Chamran@123@cluster0.31zypes.mongodb.net/`,
     { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
     (err) => {
         if (err) throw err
